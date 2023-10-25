@@ -2,6 +2,8 @@ package com.example.listas
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.listas.adapted.FilmAdapter
 import com.example.listas.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -11,7 +13,8 @@ class MainActivity : AppCompatActivity() {
         val binding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        FilmProvider.filmList[2].title
-
+        //FilmProvider.filmList[2].title
+        binding.recicler.layoutManager=LinearLayoutManager(this)
+        binding.recicler.adapter=FilmAdapter(FilmProvider.filmList)
     }
 }
