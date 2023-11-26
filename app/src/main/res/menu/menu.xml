@@ -1,4 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <item
+        android:id="@+id/salir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Salir" />
+    <item
+        android:id="@+id/peliculas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Peliculas" />
+    <item
+        android:id="@+id/editar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Editar Pelicula" />
+    <item
+        android:id="@+id/aplicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="App" />
+    <item
+        android:id="@+id/lupa"
+        android:icon="@drawable/lupa"
+        android:title="lupa"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/guardar"
+        android:title="guardar"
+        android:icon="@drawable/guardar"
+        app:showAsAction="ifRoom"/>
 </menu>
