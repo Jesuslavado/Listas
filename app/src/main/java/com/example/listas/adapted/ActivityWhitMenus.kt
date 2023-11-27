@@ -9,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.listas.EditarPelis
 import com.example.listas.MainActivity
 import com.example.listas.R
+import androidx.appcompat.app.AlertDialog
+
 
 open class ActivityWhitMenus: AppCompatActivity() {
     companion object {
@@ -55,6 +57,26 @@ open class ActivityWhitMenus: AppCompatActivity() {
                 val intent = Intent(this, EditarPelis::class.java)
                 intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT)
                 startActivity(intent)
+                true
+            }
+            R.id.lupa ->{
+                actividadActual = 3;
+                true
+            }
+            R.id.salir ->{
+                actividadActual = 4;
+                //Hacemos que al seleccionar exit, nos muestre un mensaje de si quermos salir de la app o no
+                var miDialogo = AlertDialog.Builder(this)
+                AlertDialog.Builder(this)
+                    .setTitle("Salir")
+                    .setMessage("¿Desea Salir de la Aplicacion?")
+                    .setCancelable(false)
+                    .setPositiveButton(android.R.string.ok, { dialog, which ->
+                        finish()
+                    })
+                    .setNegativeButton(android.R.string.cancel,  { dialog, which ->
+                    })
+                    .show()
                 true
             }
             else -> super.onOptionsItemSelected(item)
